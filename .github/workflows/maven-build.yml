@@ -28,8 +28,8 @@ jobs:
           cache: maven
       - name: Build with Maven Wrapper
         run: ./mvnw -B package
-      - name: Deploy to heroku  
-        uses: akhileshns/heroku-deploy@v3.6.8
+      - name: Deploy to Heroku
+        uses: AkhileshNS/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
